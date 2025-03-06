@@ -198,8 +198,8 @@ script = ExtResource("1_b11tt")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_50nhc")
-animation = &"running"
 autoplay = "default"
+frame_progress = 0.487915
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -208,3 +208,5 @@ shape = SubResource("CapsuleShape2D_y667i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 6.33333)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0

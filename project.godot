@@ -15,6 +15,10 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/defaults/default_clear_color=Color(0.3, 0.3, 0.3, 1)
+
 [input]
 
 left={
@@ -50,3 +54,4 @@ jump={
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
