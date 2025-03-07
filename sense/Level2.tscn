@@ -273,9 +273,6 @@ position = Vector2(3711, 579)
 [node name="Collectable" parent="SenceObject/collectablegroup" instance=ExtResource("6_gcafh")]
 position = Vector2(383, 339)
 
-[node name="Collectable2" parent="SenceObject/collectablegroup" instance=ExtResource("6_gcafh")]
-position = Vector2(222, 398)
-
 [node name="Collectable3" parent="SenceObject/collectablegroup" instance=ExtResource("6_gcafh")]
 position = Vector2(794, 96)
 
