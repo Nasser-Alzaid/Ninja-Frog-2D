@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://pjuah8kvsoss"]
+[gd_scene load_steps=8 format=3 uid="uid://pjuah8kvsoss"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_nf7oj"]
 [ext_resource type="Texture2D" uid="uid://fmhcsw4jcdkm" path="res://1.png" id="2_q8ylj"]
 [ext_resource type="Texture2D" uid="uid://bqs4x0mch5ckd" path="res://Terrain (16x16).png" id="3_7hmc3"]
 [ext_resource type="PackedScene" uid="uid://daffylr2gsr1n" path="res://sense/main_character.tscn" id="4_n38wh"]
-[ext_resource type="PackedScene" uid="uid://ctnco0wypmfr7" path="res://sense/trophy.tscn" id="5_225go"]
 [ext_resource type="PackedScene" uid="uid://cu1uefunpismb" path="res://sense/collectable.tscn" id="7_ay84g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6u3eu"]
@@ -224,9 +223,6 @@ layer_0/tile_data = PackedInt32Array(851968, 458752, 0, 851969, 458752, 0, 85197
 
 [node name="CharacterBody2D" parent="SenceObject" instance=ExtResource("4_n38wh")]
 position = Vector2(81, 214)
-
-[node name="trophy" parent="SenceObject" instance=ExtResource("5_225go")]
-position = Vector2(3943, 532)
 
 [node name="Area2D" type="Area2D" parent="SenceObject"]
 position = Vector2(3711, 579)
