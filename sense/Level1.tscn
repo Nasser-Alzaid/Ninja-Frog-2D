@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://pjuah8kvsoss"]
+[gd_scene load_steps=10 format=3 uid="uid://pjuah8kvsoss"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_nf7oj"]
 [ext_resource type="Texture2D" uid="uid://fmhcsw4jcdkm" path="res://1.png" id="2_q8ylj"]
 [ext_resource type="Texture2D" uid="uid://bqs4x0mch5ckd" path="res://Terrain (16x16).png" id="3_7hmc3"]
 [ext_resource type="PackedScene" uid="uid://daffylr2gsr1n" path="res://sense/main_character.tscn" id="4_n38wh"]
+[ext_resource type="PackedScene" uid="uid://cp0svdqhkwjln" path="res://sense/trophy_1.tscn" id="6_vl0j5"]
 [ext_resource type="PackedScene" uid="uid://cu1uefunpismb" path="res://sense/collectable.tscn" id="7_ay84g"]
+[ext_resource type="Script" path="res://sense/trophy_1.gd" id="7_d23ll"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6u3eu"]
 texture = ExtResource("3_7hmc3")
@@ -274,7 +276,7 @@ position = Vector2(3042, 435)
 [node name="Collectable15" parent="SenceObject/collectablegroup" instance=ExtResource("7_ay84g")]
 position = Vector2(3328, 442)
 
-[node name="Collectable" parent="SenceObject" instance=ExtResource("7_ay84g")]
+[node name="Collectable16" parent="SenceObject/collectablegroup" instance=ExtResource("7_ay84g")]
 position = Vector2(2353, 581)
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -297,3 +299,10 @@ theme_override_font_sizes/font_size = 30
 text = "Points : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="trophy1" parent="." instance=ExtResource("6_vl0j5")]
+position = Vector2(3765, 405)
+script = ExtResource("7_d23ll")
+
+[connection signal="body_entered" from="trophy1" to="GameManager" method="_on_trophy_1_body_entered"]
+[connection signal="body_entered" from="trophy1" to="trophy1" method="_on_body_entered"]
