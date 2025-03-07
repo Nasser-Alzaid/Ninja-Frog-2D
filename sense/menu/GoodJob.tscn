@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c62sw47h71wva"]
 
-[ext_resource type="Script" path="res://sense/good_job.gd" id="1_scqtk"]
-[ext_resource type="Texture2D" uid="uid://dbb6wy2hoxxas" path="res://2304x1296.png" id="2_gsm52"]
-[ext_resource type="Texture2D" uid="uid://d2exeppepsi3a" path="res://congract.png" id="3_e07y2"]
+[ext_resource type="Script" path="res://sense/menu/good_job.gd" id="1_scqtk"]
+[ext_resource type="Texture2D" uid="uid://dbb6wy2hoxxas" path="res://assets/menu_graph/2304x1296.png" id="2_gsm52"]
+[ext_resource type="Texture2D" uid="uid://d2exeppepsi3a" path="res://assets/menu_graph/congract.png" id="3_e07y2"]
 
 [node name="GoodJob" type="Node"]
 script = ExtResource("1_scqtk")

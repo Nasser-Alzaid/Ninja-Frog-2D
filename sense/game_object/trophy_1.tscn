@@ -1,18 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://cp0svdqhkwjln"]
 
-[ext_resource type="Texture2D" uid="uid://dba0quhtwa3yx" path="res://End (Idle).png" id="1_mul1j"]
+[ext_resource type="Texture2D" uid="uid://dba0quhtwa3yx" path="res://assets/game_element/End (Idle).png" id="1_mul1j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_700ph"]
-size = Vector2(69, 64)
+size = Vector2(79.5, 79)
 
 [node name="trophy1" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-25, 70.75)
-scale = Vector2(1.625, 1.66406)
+position = Vector2(-19.5, 77.25)
+scale = Vector2(1.79688, 1.86719)
 texture = ExtResource("1_mul1j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-25, 85)
+position = Vector2(-19.75, 92.5)
 shape = SubResource("RectangleShape2D_700ph")

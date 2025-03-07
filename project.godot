@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="2D-platformer-game-Frog"
-run/main_scene="res://sense/Main_Menu.tscn"
+run/main_scene="res://sense/menu/Main_Menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 

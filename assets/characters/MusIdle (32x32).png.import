@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2exeppepsi3a"
-path="res://.godot/imported/congract.png-1c221288485555b83a53e56b08e186e8.ctex"
+uid="uid://bihijys5kd5xl"
+path="res://.godot/imported/MusIdle (32x32).png-f79901d496f8f7b5442327fadc2aabf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://congract.png"
-dest_files=["res://.godot/imported/congract.png-1c221288485555b83a53e56b08e186e8.ctex"]
+source_file="res://assets/characters/MusIdle (32x32).png"
+dest_files=["res://.godot/imported/MusIdle (32x32).png-f79901d496f8f7b5442327fadc2aabf9.ctex"]
 
 [params]
 

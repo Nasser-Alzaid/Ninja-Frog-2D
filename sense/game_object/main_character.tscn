@@ -1,9 +1,9 @@
 [gd_scene load_steps=30 format=3 uid="uid://daffylr2gsr1n"]
 
-[ext_resource type="Script" path="res://sense/main_character.gd" id="1_b11tt"]
-[ext_resource type="Texture2D" uid="uid://k2l87kfk4nqs" path="res://Jump (32x32).png" id="1_sd2lq"]
-[ext_resource type="Texture2D" uid="uid://sd3erqc0rptu" path="res://Idle (32x32).png" id="2_sdlpt"]
-[ext_resource type="Texture2D" uid="uid://dypfy7whf41ip" path="res://Run (32x32).png" id="4_uywql"]
+[ext_resource type="Script" path="res://sense/game_object/main_character.gd" id="1_b11tt"]
+[ext_resource type="Texture2D" uid="uid://k2l87kfk4nqs" path="res://assets/characters/Jump (32x32).png" id="1_sd2lq"]
+[ext_resource type="Texture2D" uid="uid://sd3erqc0rptu" path="res://assets/characters/Idle (32x32).png" id="2_sdlpt"]
+[ext_resource type="Texture2D" uid="uid://dypfy7whf41ip" path="res://assets/characters/Run (32x32).png" id="4_uywql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uji7"]
 atlas = ExtResource("2_sdlpt")
@@ -199,7 +199,6 @@ script = ExtResource("1_b11tt")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_50nhc")
 autoplay = "default"
-frame_progress = 0.57679
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

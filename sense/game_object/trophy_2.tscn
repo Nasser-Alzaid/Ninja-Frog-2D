@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2v2gyd7b0u38"]
 
-[ext_resource type="Texture2D" uid="uid://dba0quhtwa3yx" path="res://End (Idle).png" id="1_b2jwi"]
-[ext_resource type="Script" path="res://sense/trophy_2.gd" id="1_ok2p5"]
+[ext_resource type="Texture2D" uid="uid://dba0quhtwa3yx" path="res://assets/game_element/End (Idle).png" id="1_b2jwi"]
+[ext_resource type="Script" path="res://sense/game_object/trophy_2.gd" id="1_ok2p5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j7akd"]
 size = Vector2(75, 86)
@@ -11,12 +11,12 @@ position = Vector2(-88, 49)
 script = ExtResource("1_ok2p5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-21, 24)
-scale = Vector2(1.65625, 1.75)
+position = Vector2(-11, 33.5)
+scale = Vector2(1.96875, 2.04688)
 texture = ExtResource("1_b2jwi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-18, 40)
+position = Vector2(-11, 44)
 shape = SubResource("RectangleShape2D_j7akd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbcaks53s2uof"
-path="res://.godot/imported/End (Pressed) (64x64).png-0df7924d2d99dc07cdb219bb3e7f937f.ctex"
+uid="uid://cxifhcesbjfps"
+path="res://.godot/imported/Cherries.png-d667392cdceab05debbdf164d5a8d72a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://End (Pressed) (64x64).png"
-dest_files=["res://.godot/imported/End (Pressed) (64x64).png-0df7924d2d99dc07cdb219bb3e7f937f.ctex"]
+source_file="res://assets/game_element/Cherries.png"
+dest_files=["res://.godot/imported/Cherries.png-d667392cdceab05debbdf164d5a8d72a.ctex"]
 
 [params]
 
