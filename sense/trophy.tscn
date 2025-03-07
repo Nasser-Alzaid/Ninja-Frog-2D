@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctnco0wypmfr7"]
+[gd_scene load_steps=14 format=3 uid="uid://ctnco0wypmfr7"]
 
 [ext_resource type="Texture2D" uid="uid://bbcaks53s2uof" path="res://End (Pressed) (64x64).png" id="1_aqn3m"]
+[ext_resource type="Script" path="res://sense/trophy.gd" id="1_w4kds"]
+[ext_resource type="PackedScene" uid="uid://dv06i78o4t1h" path="res://sense/Level2.tscn" id="2_f581u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q40fo"]
 atlas = ExtResource("1_aqn3m")
@@ -67,20 +69,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6bn5v"]
-size = Vector2(73.9219, 73.3906)
+size = Vector2(91, 92.6953)
 
 [node name="trophy" type="Area2D"]
 position = Vector2(3809, 355)
+script = ExtResource("1_w4kds")
+target_level = ExtResource("2_f581u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-203, -134)
-scale = Vector2(1.28124, 1.5625)
+position = Vector2(-203.5, -92)
+scale = Vector2(2.29687, 2.75)
 sprite_frames = SubResource("SpriteFrames_evhln")
 animation = &"win"
 autoplay = "win"
 frame_progress = 0.316053
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-199, -122)
+position = Vector2(-199.5, -60)
 shape = SubResource("RectangleShape2D_6bn5v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
