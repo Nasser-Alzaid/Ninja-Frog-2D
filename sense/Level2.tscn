@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dv06i78o4t1h"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_y26lb"]
-[ext_resource type="Texture2D" uid="uid://ipjns23fyfuq" path="res://sky.png" id="2_jt3km"]
+[ext_resource type="Texture2D" uid="uid://fmhcsw4jcdkm" path="res://1.png" id="2_0km5a"]
 [ext_resource type="Texture2D" uid="uid://bqs4x0mch5ckd" path="res://Terrain (16x16).png" id="3_s40fg"]
 [ext_resource type="PackedScene" uid="uid://daffylr2gsr1n" path="res://sense/main_character.tscn" id="4_kvsg1"]
 [ext_resource type="PackedScene" uid="uid://d2v2gyd7b0u38" path="res://sense/trophy_2.tscn" id="6_3at8s"]
@@ -258,7 +258,7 @@ offset_top = -649.0
 offset_right = 2746.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("2_jt3km")
+texture = ExtResource("2_0km5a")
 
 [node name="TileMap" type="TileMap" parent="SenceObject"]
 texture_filter = 1
