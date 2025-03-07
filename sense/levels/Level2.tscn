@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dv06i78o4t1h"]
+[gd_scene load_steps=19 format=3 uid="uid://dv06i78o4t1h"]
 
 [ext_resource type="Script" path="res://sense/game_object/game_manager.gd" id="1_awm7u"]
 [ext_resource type="Texture2D" uid="uid://fmhcsw4jcdkm" path="res://assets/menu_graph/1.png" id="2_ochnf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cu1uefunpismb" path="res://sense/game_object/collectable.tscn" id="5_6vvyy"]
 [ext_resource type="Script" path="res://sense/game_object/fall_area.gd" id="6_pouhr"]
 [ext_resource type="Texture2D" uid="uid://bjqbotmo5gf3s" path="res://assets/menu_graph/hearticon-removebg-preview (1).png" id="7_a36ia"]
+[ext_resource type="Script" path="res://sense/levels/pause.gd" id="8_hjt5x"]
 [ext_resource type="PackedScene" uid="uid://d2v2gyd7b0u38" path="res://sense/game_object/trophy_2.tscn" id="8_ptvum"]
 [ext_resource type="PackedScene" uid="uid://dqai7umk2g23g" path="res://sense/game_object/enimes.tscn" id="9_d1824"]
 
@@ -248,6 +249,21 @@ sources/0 = SubResource("TileSetAtlasSource_6u3eu")
 a = Vector2(-1227, 0)
 b = Vector2(2773, -4)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpcii"]
+bg_color = Color(0.920953, 0.567507, 0.4234, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pjn0"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntycm"]
+bg_color = Color(0.921569, 0.568627, 0.423529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5j7qj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db1y0"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="Node" type="Node"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -389,6 +405,69 @@ layout_mode = 2
 texture = ExtResource("7_a36ia")
 expand_mode = 3
 
+[node name="Pause" type="Node" parent="UI"]
+script = ExtResource("8_hjt5x")
+
+[node name="PausePanel" type="Panel" parent="UI/Pause"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -194.0
+offset_right = 195.0
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "GAME PAUSE"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -86.0
+offset_right = 262.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 22
+
+[node name="resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxFlat_xpcii")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8pjn0")
+text = "Resume"
+
+[node name="menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+theme_override_styles/hover = SubResource("StyleBoxFlat_ntycm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_5j7qj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_db1y0")
+text = "Go to main menu"
+metadata/_edit_group_ = true
+
 [node name="trophy2" parent="." instance=ExtResource("8_ptvum")]
 position = Vector2(3840, 203)
 
@@ -404,3 +483,5 @@ position = Vector2(517, 360)
 position = Vector2(1321, 462)
 
 [connection signal="body_entered" from="SenceObject/fall" to="SenceObject/fall/CollisionShape2D" method="_on_fall_body_entered"]
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/resume" to="UI/Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/menu" to="UI/Pause" method="_on_menu_pressed"]
