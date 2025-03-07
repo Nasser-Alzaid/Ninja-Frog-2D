@@ -266,8 +266,9 @@ bg_color = Color(0, 0, 0, 1)
 
 [node name="Node" type="Node"]
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 script = ExtResource("1_awm7u")
+hearts = [NodePath("../UI/hearts/HBoxContainer/heart"), NodePath("../UI/hearts/HBoxContainer/heart3"), NodePath("../UI/hearts/HBoxContainer/heart2")]
 
 [node name="SenceObject" type="Node" parent="."]
 

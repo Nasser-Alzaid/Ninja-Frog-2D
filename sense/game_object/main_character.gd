@@ -10,6 +10,11 @@ const JUMP_VELOCITY = -990.0
 func jump():
 	velocity.y = JUMP_VELOCITY
 
+func jump_side(x):
+	velocity.y = JUMP_VELOCITY
+	velocity.x = JUMP_VELOCITY
+
+
 func _physics_process(delta: float) -> void:
 	#Animation
 	if (velocity.x > 1 || velocity.x < -1):
