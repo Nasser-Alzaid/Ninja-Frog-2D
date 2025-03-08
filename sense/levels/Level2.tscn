@@ -268,7 +268,7 @@ bg_color = Color(0, 0, 0, 1)
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 script = ExtResource("1_awm7u")
-hearts = [NodePath("../UI/hearts/HBoxContainer/heart"), NodePath("../UI/hearts/HBoxContainer/heart3"), NodePath("../UI/hearts/HBoxContainer/heart2")]
+hearts = [NodePath("../UI/hearts/HBoxContainer/heart"), NodePath("../UI/hearts/HBoxContainer/heart2"), NodePath("../UI/hearts/HBoxContainer/heart3")]
 
 [node name="SenceObject" type="Node" parent="."]
 
@@ -318,7 +318,7 @@ position = Vector2(1702, 444)
 position = Vector2(1826, 440)
 
 [node name="Collectable8" parent="SenceObject/collectablegroup" instance=ExtResource("5_6vvyy")]
-position = Vector2(2070, 330)
+position = Vector2(2064, 344)
 
 [node name="Collectable9" parent="SenceObject/collectablegroup" instance=ExtResource("5_6vvyy")]
 position = Vector2(2334, 146)
@@ -327,16 +327,19 @@ position = Vector2(2334, 146)
 position = Vector2(2608, 192)
 
 [node name="Collectable11" parent="SenceObject/collectablegroup" instance=ExtResource("5_6vvyy")]
-position = Vector2(3120, 94)
+position = Vector2(2872, 72)
 
 [node name="Collectable12" parent="SenceObject/collectablegroup" instance=ExtResource("5_6vvyy")]
-position = Vector2(3406, 98)
+position = Vector2(3416, 104)
 
 [node name="Collectable13" parent="SenceObject/collectablegroup" instance=ExtResource("5_6vvyy")]
 position = Vector2(2830, 428)
 
-[node name="Collectable" parent="SenceObject" instance=ExtResource("5_6vvyy")]
+[node name="Collectable2" parent="SenceObject/collectablegroup" instance=ExtResource("5_6vvyy")]
 position = Vector2(3349, 381)
+
+[node name="Collectable14" parent="SenceObject/collectablegroup" instance=ExtResource("5_6vvyy")]
+position = Vector2(3086, 101)
 
 [node name="fall" type="Area2D" parent="SenceObject"]
 
@@ -396,12 +399,12 @@ layout_mode = 2
 texture = ExtResource("7_a36ia")
 expand_mode = 3
 
-[node name="heart3" type="TextureRect" parent="UI/hearts/HBoxContainer"]
+[node name="heart2" type="TextureRect" parent="UI/hearts/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("7_a36ia")
 expand_mode = 3
 
-[node name="heart2" type="TextureRect" parent="UI/hearts/HBoxContainer"]
+[node name="heart3" type="TextureRect" parent="UI/hearts/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("7_a36ia")
 expand_mode = 3
@@ -475,13 +478,25 @@ position = Vector2(3840, 203)
 [node name="enemys" type="Node" parent="."]
 
 [node name="Enimes" parent="enemys" instance=ExtResource("9_d1824")]
-position = Vector2(1032, 458)
+position = Vector2(848, 376)
 
 [node name="Enimes2" parent="enemys" instance=ExtResource("9_d1824")]
-position = Vector2(517, 360)
+position = Vector2(272, 280)
 
 [node name="Enimes3" parent="enemys" instance=ExtResource("9_d1824")]
-position = Vector2(1321, 462)
+position = Vector2(1128, 368)
+
+[node name="Enimes6" parent="enemys" instance=ExtResource("9_d1824")]
+position = Vector2(3032, 224)
+
+[node name="Enimes7" parent="enemys" instance=ExtResource("9_d1824")]
+position = Vector2(2696, -8)
+
+[node name="Enimes4" parent="enemys" instance=ExtResource("9_d1824")]
+position = Vector2(1256, -16)
+
+[node name="Enimes5" parent="enemys" instance=ExtResource("9_d1824")]
+position = Vector2(2352, 136)
 
 [connection signal="body_entered" from="SenceObject/fall" to="SenceObject/fall/CollisionShape2D" method="_on_fall_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/resume" to="UI/Pause" method="_on_resume_pressed"]
