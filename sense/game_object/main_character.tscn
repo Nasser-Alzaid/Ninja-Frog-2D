@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://daffylr2gsr1n"]
+[gd_scene load_steps=31 format=3 uid="uid://daffylr2gsr1n"]
 
 [ext_resource type="Script" path="res://sense/game_object/main_character.gd" id="1_b11tt"]
 [ext_resource type="Texture2D" uid="uid://k2l87kfk4nqs" path="res://assets/characters/Jump (32x32).png" id="1_sd2lq"]
 [ext_resource type="Texture2D" uid="uid://sd3erqc0rptu" path="res://assets/characters/Idle (32x32).png" id="2_sdlpt"]
 [ext_resource type="Texture2D" uid="uid://dypfy7whf41ip" path="res://assets/characters/Run (32x32).png" id="4_uywql"]
+[ext_resource type="AudioStream" uid="uid://bcjbayrotdt73" path="res://assets/characters/cartoon-jump-6462.mp3" id="5_lqe2k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uji7"]
 atlas = ExtResource("2_sdlpt")
@@ -209,3 +210,7 @@ shape = SubResource("CapsuleShape2D_y667i")
 position = Vector2(1, 6.33333)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
+
+[node name="Jump_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_lqe2k")
+volume_db = -16.0
